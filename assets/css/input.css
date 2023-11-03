@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/******************************************************************/
+
+@font-face {
+    font-family:vazir ;
+    src: url("../../font/vazir/Vazir-Bold.woff2")format("woff2"),
+         url("../../font/vazir/Vazir-Bold.woff")format("woff"),
+         url("../../font/vazir/Vazir-Bold.ttf")format("truetype");
+
+}
+
+body{
+    @apply bg-slate-300 font-vazir
+}
+
+.container{
+    @apply mt-10
+}
+
+.row{
+    @apply grid grid-cols-4 gap-5 
+}
+
+.card{
+    @apply  bg-white rounded-3xl
+}
+
+img{
+    @apply m-auto rounded-t-3xl
+}
+
+.content{
+    @apply flex justify-around bg-white mt-4
+}
+h2{
+    @apply text-lg
+}
+
+/** دکمه افزودن به سبد خرید **/
+.btn{
+    @apply flex justify-center bg-white p-3 rounded-3xl
+}
+button{
+    @apply flex justify-center mt-5 bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-700
+}
+
+
+/*********************** سبد خرید ************************/
+.cart {
+   @apply grid grid-cols-1 mt-5 bg-white w-[800px] h-[280px] rounded-lg m-auto overflow-auto
+  }
+  
+  .cart__title {
+  @apply flex justify-center items-center
+  }
+  
+  .cart__line {
+   @apply  border-t-2 border-indigo-500 my-auto
+    
+  }
+  .cart__item-title {
+    @apply flex justify-center
+  }
+  
+  .cart__item {
+   @apply flex justify-around items-center
+  }
+
+  .cart__items {
+    @apply grid text-center gap-x-2 grid-rows-4 items-center
+  }
+  
+  .cart__item-remove {
+   @apply bg-red-500 hover:bg-red-600 text-white mx-auto flex justify-center mt-1
+  }
+  
+  .cart__total-price {
+     @apply text-green-600 flex justify-center items-center
+ 
+  }
